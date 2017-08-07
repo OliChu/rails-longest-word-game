@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="align-center">
+      <div class="letter-wrapper">
+        <ul class="list-inline">
+        <% @attempt.split('').each do |letter| %>
+          <li><div class="letter-box"><h1><%= letter.upcase %></h1></div></li>
+        <% end %>
+        </ul>
+      </div>
+
+      <div class="result-wrapper text-center">
+        <div class="result">
+          <div class="result-score">
+            <h1>
+              Your score: <%= @result[:score]%> points
+            </h1>
+          </div>
+          <div class="result-message">
+            <h2>
+              <%= @result[:message] %>
+            </h2>
+          </div>
+          <%= link_to 'Play Again', '/', class:"btn btn-danger btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
